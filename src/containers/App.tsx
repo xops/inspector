@@ -28,7 +28,7 @@ const App: React.FC = () => {
     monaco.editor.setTheme(t);
   }, [darkMode.value]);
 
-  const snapId = "wallet_plugin_http://localhost:5000/package.json";
+  const snapId = "wallet_plugin_http://localhost:8081/package.json";
 
   const handleConnect = () => {
     (window as any).ethereum.send({
