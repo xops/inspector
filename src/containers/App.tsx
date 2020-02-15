@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { CssBaseline, Button } from "@material-ui/core";
+import React, { useEffect, useState } from "react";
+import { CssBaseline, Button, InputBase, Grid, Typography } from "@material-ui/core";
 import { MuiThemeProvider } from "@material-ui/core";
 import { lightTheme, darkTheme } from "../themes/openrpcTheme";
 import useDarkMode from "use-dark-mode";
@@ -20,6 +20,7 @@ try {
 const darkModeOptions = localStorageEnabled ? undefined : localStorageMock;
 
 const App: React.FC = () => {
+  const [snapId, setSnapId] = useState("wallet_plugin_http://localhost:8081/package.json")
   const darkMode = useDarkMode(undefined, darkModeOptions);
   const [query] = useQueryParams();
   const theme = darkMode.value ? darkTheme : lightTheme;
@@ -27,8 +28,6 @@ const App: React.FC = () => {
     const t = darkMode.value ? "vs-dark" : "vs";
     monaco.editor.setTheme(t);
   }, [darkMode.value]);
-
-  const snapId = "wallet_plugin_http://localhost:8081/package.json";
 
   const handleConnect = () => {
     (window as any).ethereum.send({
@@ -39,11 +38,16 @@ const App: React.FC = () => {
     });
   };
 
-
   return (
     <MuiThemeProvider theme={theme}>
       <CssBaseline />
-      <Button onClick={handleConnect}>Connect</Button>
+      <Grid container direction="row" justify="center" alignItems="center">
+        <Typography variant="h6" style={{marginRight: "15px"}}>snapId</Typography>
+        <InputBase value={snapId} onChange={(e) => setSnapId(e.target.value)}
+          style={{ background: "rgba(0,0,0,0.1)", borderRadius: "4px", padding: "0px 10px", marginRight: "5px", width: "500px" }}
+        />
+        <Button onClick={handleConnect} variant="outlined">Connect</Button>
+      </Grid>
       <Inspector
         onToggleDarkMode={darkMode.toggle}
         darkMode={darkMode.value}
