@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/xops/inspector-snaps/compare/1.3.0...1.3.1) (2020-02-15)
+
+
+### Bug Fixes
+
+* add snapId input ([f6d4a37](https://github.com/xops/inspector-snaps/commit/f6d4a379b8bf60003cbf264d6ff09eb3f78a41c1))
+
 # [1.3.0](https://github.com/xops/inspector/compare/1.2.9...1.3.0) (2020-02-15)
 
 
