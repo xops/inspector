@@ -3,6 +3,7 @@
   "version": "0.0.0-development",
   "description": "",
   "main": "package/index.js",
+  "homepage": "https://xops.github.io/inspector-snaps/",
   "files": [
     "package/"
   ],
