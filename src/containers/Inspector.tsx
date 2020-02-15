@@ -26,6 +26,8 @@ interface IProps {
   request?: any;
   darkMode?: boolean;
   hideToggleTheme?: boolean;
+  ethereum: any;
+  snapId: string;
   openrpcMethodObject?: MethodObject;
   onToggleDarkMode?: () => void;
 }
@@ -68,12 +70,9 @@ function useCounter(defaultValue: number): [number, () => void] {
 }
 
 const Inspector: React.FC<IProps> = (props) => {
-  const [id, incrementId] = useCounter(0);
   const [json, setJson] = useState(props.request || {
-    jsonrpc: "2.0",
     method: "",
     params: [],
-    id,
   });
   const editorRef = useRef();
   const [results, setResults] = useState();
@@ -82,24 +81,12 @@ const Inspector: React.FC<IProps> = (props) => {
   useEffect(() => {
     if (props.openrpcMethodObject) {
       setJson({
-        jsonrpc: "2.0",
         method: props.openrpcMethodObject.name,
         params: json.params,
-        id: id.toString(),
       });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-  useEffect(() => {
-    if (json) {
-      setJson({
-        ...json,
-        jsonrpc: "2.0",
-        id: id.toString(),
-      });
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id]);
 
   useEffect(() => {
     if (props.url) {
@@ -110,10 +97,15 @@ const Inspector: React.FC<IProps> = (props) => {
   const handlePlayButton = async () => {
     clear();
     if (client) {
-      incrementId();
       try {
-        const result = await client.request(json.method, json.params);
-        setResults({ jsonrpc: "2.0", result, id });
+        const result = await props.ethereum.send({
+          method: props.snapId,
+          params: [{
+            method: json.method,
+            params: json.params,
+          }],
+        });
+        setResults({ result });
       } catch (e) {
         setError(e);
       }
@@ -152,15 +144,6 @@ const Inspector: React.FC<IProps> = (props) => {
           <IconButton onClick={handlePlayButton}>
             <PlayCircle />
           </IconButton>
-          <InputBase
-            value={url}
-            placeholder="Enter a JSON-RPC server URL"
-            onChange={
-              (event: ChangeEvent<HTMLInputElement>) => setUrl(event.target.value)
-            }
-            fullWidth
-            style={{ background: "rgba(0,0,0,0.1)", borderRadius: "4px", padding: "0px 10px", marginRight: "5px" }}
-          />
           {
             props.hideToggleTheme
               ? null
