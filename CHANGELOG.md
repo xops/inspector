@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/xops/inspector-snaps/compare/1.3.1...1.3.2) (2020-02-15)
+
+
+### Bug Fixes
+
+* homepage ([c99ba32](https://github.com/xops/inspector-snaps/commit/c99ba3266af1b340df28285479b0c30487344698))
+
 ## [1.3.1](https://github.com/xops/inspector-snaps/compare/1.3.0...1.3.1) (2020-02-15)
 
 
