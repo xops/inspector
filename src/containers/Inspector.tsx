@@ -1,8 +1,8 @@
-import React, { useState, useEffect, ChangeEvent, Dispatch, useRef } from "react";
+import React, { useState, useEffect, Dispatch, useRef } from "react";
 import SplitPane from "react-split-pane";
 import JSONRPCRequestEditor from "./JSONRPCRequestEditor";
 import PlayCircle from "@material-ui/icons/PlayCircleFilled";
-import { IconButton, AppBar, Toolbar, Typography, Button, InputBase } from "@material-ui/core";
+import { IconButton, AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 import { Client, RequestManager, HTTPTransport, WebSocketTransport } from "@open-rpc/client-js";
 import Brightness3Icon from "@material-ui/icons/Brightness3";
 import WbSunnyIcon from "@material-ui/icons/WbSunny";
@@ -58,16 +58,6 @@ const useClient = (url: string): [Client, JSONRPCError | undefined, Dispatch<JSO
   }, [url]);
   return [client, error, setError];
 };
-
-function useCounter(defaultValue: number): [number, () => void] {
-  const [counter, setCounter] = useState(defaultValue);
-
-  const incrementCounter = () => {
-    setCounter(counter + 1);
-  };
-
-  return [counter, incrementCounter];
-}
 
 const Inspector: React.FC<IProps> = (props) => {
   const [json, setJson] = useState(props.request || {
