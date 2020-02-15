@@ -1,3 +1,16 @@
+# [1.3.0](https://github.com/xops/inspector/compare/1.2.9...1.3.0) (2020-02-15)
+
+
+### Bug Fixes
+
+* linting issues ([4176f22](https://github.com/xops/inspector/commit/4176f22ee28129890c02895b0f80100c681215b4))
+* snapid ([8941433](https://github.com/xops/inspector/commit/894143340229b64812e8b3b992440413cd909bc7))
+
+
+### Features
+
+* initial snaps ([635f22d](https://github.com/xops/inspector/commit/635f22d098ff7c7c9f391141a466d63c657fbb69))
+
 ## [1.2.9](https://github.com/open-rpc/inspector/compare/1.2.8...1.2.9) (2020-02-06)
 
 
