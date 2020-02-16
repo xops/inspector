@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/inspector-snaps/editor.worker.js"
   },
   {
-    "revision": "53e04ac7042bd6ecc53219392cc52104",
+    "revision": "3eda5381e56f4bb7b382caebdac9f727",
     "url": "/inspector-snaps/index.html"
   },
   {
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/inspector-snaps/static/css/3.c960b705.chunk.css"
   },
   {
-    "revision": "b86788c3951c0e9d73df",
+    "revision": "68d9659cf9ba93a20b6b",
     "url": "/inspector-snaps/static/css/main.e8c97df1.chunk.css"
   },
   {
@@ -280,8 +280,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/inspector-snaps/static/js/9.de695079.chunk.js"
   },
   {
-    "revision": "b86788c3951c0e9d73df",
-    "url": "/inspector-snaps/static/js/main.df130b62.chunk.js"
+    "revision": "68d9659cf9ba93a20b6b",
+    "url": "/inspector-snaps/static/js/main.ce907b38.chunk.js"
   },
   {
     "revision": "c8e30c792546e9a92a4d",
