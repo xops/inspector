@@ -20,7 +20,7 @@ try {
 const darkModeOptions = localStorageEnabled ? undefined : localStorageMock;
 
 const App: React.FC = () => {
-  const [snapId, setSnapId] = useState("wallet_plugin_http://localhost:8081/package.json")
+  const [snapId, setSnapId] = useState("wallet_plugin_http://localhost:8081/package.json");
   const darkMode = useDarkMode(undefined, darkModeOptions);
   const [query] = useQueryParams();
   const theme = darkMode.value ? darkTheme : lightTheme;
@@ -31,7 +31,7 @@ const App: React.FC = () => {
 
   const handleConnect = () => {
     (window as any).ethereum.send({
-      method: "wallet_requestPermissions",
+      method: "wallet_enable",
       params: [{
         [snapId]: {},
       }],
