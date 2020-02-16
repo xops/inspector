@@ -1,3 +1,10 @@
+## [1.3.3](https://github.com/xops/inspector-snaps/compare/1.3.2...1.3.3) (2020-02-16)
+
+
+### Bug Fixes
+
+* use wallet_enable ([fa35959](https://github.com/xops/inspector-snaps/commit/fa35959878ab473c507a420f00c00a759a28cb4a))
+
 ## [1.3.2](https://github.com/xops/inspector-snaps/compare/1.3.1...1.3.2) (2020-02-15)
 
 
