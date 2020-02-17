@@ -1,27 +1,26 @@
-# OpenRPC Inspector
+# 🕵️‍♂️ Inspector Snaps 👌
 
-OpenRPC Inspector is a simple tool to create, modify and execute JSON-RPC requests.
+🕵️‍♂️ Inspector Snaps 👌 is a simple tool to create, modify and execute JSON-RPC requests to metamask snaps plugins
 
 - Edit JSON-RPC request
-- Test JSON-RPC request against a given URL
+- Test JSON-RPC request against a given metamask `snapId`
 
-It can be used as a standalone tool or included in other projects.
+It can be used as a standalone tool or included in other projects
 
-![inspector_test_themed](https://user-images.githubusercontent.com/52548273/63221603-6c4c6080-c150-11e9-9b20-bd37d4981d30.gif)
 
-https://inspector.open-rpc.org
+![image](https://user-images.githubusercontent.com/364566/74618104-a5f52880-50ed-11ea-9c13-5936dfe3f8ce.png)
+
+https://xops.github.io/inspector-snaps/
 
 ### Url configuration
 
 You can configure the default request and url via url params:
 
-`?url=http://localhost:8545`
-
 `?request[jsonrpc]=2.0&request[method]=eth_chainId`
 
 here is a full example:
 
-https://inspector.open-rpc.org/?url=http://localhost:8002/multi-geth/mainnet/1.9.0&request[jsonrpc]=2.0&request[method]=eth_chainId&request[params][0]=foo
+https://xops.github.io/inspector-snaps/?&request[method]=hello&request[params][0]=world
 
 ### Contributing
 
@@ -29,4 +28,4 @@ How to contribute, build and release are outlined in [CONTRIBUTING.md](CONTRIBUT
 
 
 # Resources
--  [open-rpc/client-js](https://github.com/open-rpc/client-js)
+- [open-rpc.org](https://open-rpc.org/)
