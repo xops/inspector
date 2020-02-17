@@ -8,7 +8,8 @@
 It can be used as a standalone tool or included in other projects
 
 
-![image](https://user-images.githubusercontent.com/364566/74618104-a5f52880-50ed-11ea-9c13-5936dfe3f8ce.png)
+![inspector_snaps](https://user-images.githubusercontent.com/364566/74618938-076ac680-50f1-11ea-9e42-9c6f803c3bda.gif)
+
 
 https://xops.github.io/inspector-snaps/
 
