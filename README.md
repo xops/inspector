@@ -30,3 +30,4 @@ How to contribute, build and release are outlined in [CONTRIBUTING.md](CONTRIBUT
 
 # Resources
 - [open-rpc.org](https://open-rpc.org/)
+- [metamask snaps beta wiki](https://github.com/MetaMask/metamask-snaps-beta/wiki)
